@@ -40,6 +40,7 @@ public class MyAdapter extends ArrayAdapter<Player> {
         sport.setText("Main Sport" + listOfPlayers.get(position).getMainSport());
 
 
+
         //below is additional content -- Imageview
         ImageView imageView = single_item_view.findViewById(R.id.personalhandsomeportrait);
         imageView.setImageResource(listOfPlayers.get(position).getImageResource());
