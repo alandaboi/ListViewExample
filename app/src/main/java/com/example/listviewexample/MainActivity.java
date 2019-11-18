@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity  {
     }
 
     public void getPlayers(){
-        String sport[] = new String[] {"golf", "tennis", "badminton", "soccer", "football", "basketball", "competitive gaming", "hockey", "synchronized swimming", "track", "cross country", "gymnastics", "ice hockey", "figure skating", "volleyball"};
+        String sport[] = new String[] {"Golf", "Tennis", "Badminton", "Soccer", "Football", "Basketball", "Competitive Gaming", "Hockey", "Synchronized Swimming", "Track", "Cross Country", "Gymnastics", "Ice Hockey", "Figure Skating", "Volleyball"};
         String name[] = new String[] {"Mr. Miro", "Alan", "David", "Alex", "Jimmy", "Sunny", "Jesse", "Ronal", "Colin", "Jarvis", "Cindy", "Cathy", "Hedwig", "Quinn", "Philip"};
         int imageResource[] = new int[] {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g, R.drawable.h, R.drawable.i, R.drawable.j, R.drawable.k, R.drawable.l, R.drawable.m, R.drawable.n, R.drawable.o};
         int worth[] = new int[] {15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
