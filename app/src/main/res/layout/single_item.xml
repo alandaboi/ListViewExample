@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-        android:layout_height="match_parent"
-    android:orientation="horizontal"
-    >
+    android:layout_height="match_parent">
+
     <ImageView
         android:id="@+id/personalhandsomeportrait"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/pic"
-        >
+
+        android:layout_width="200dp"
+        android:layout_height="200dp">
     </ImageView>
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,24 +23,21 @@
             android:text="Name">
 
         </TextView>
-    <TextView
-        android:id="@+id/age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Age"
-        android:textSize="30dp"
-        >
 
-    </TextView>
-
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:textSize="30dp">
+        </TextView>
 
         <TextView
             android:id="@+id/worth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Worth"
-            android:textSize="30dp"
-            >
+            android:textSize="30dp">
 
         </TextView>
 
@@ -51,11 +46,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Skill"
-            android:textSize="30dp"
-            >
+            android:textSize="30dp">
 
-            </TextView>
+        </TextView>
 
-</LinearLayout>
+    </LinearLayout>
+
 </LinearLayout>
 

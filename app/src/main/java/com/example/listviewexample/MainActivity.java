@@ -13,28 +13,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
-
+    List<Player> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    //Todo reference listview
-    //  Todo       ListView listView = findViewById();
-    // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
-        //Todo  add custom adapter to listview
-        //Todo listView.setAdapter(------);
         ListView listView = findViewById(R.id.listview);
-        ArrayAdapter<Player> MyAdapter = new ArrayAdapter<Player>(this, R.layout.activity_main,getPlayers());
-        listView.setAdapter(MyAdapter);
+        getPlayers();
+        MyAdapter myAdapter = new MyAdapter(this, 0, list);
+        listView.setAdapter(myAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
     }
-    //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
-    // choose successful sportsmen from different sports, make sure to fill Player class before starting
-    public List<Player> getPlayers(){
-        ArrayList<Player> list = new ArrayList<Player>();
-        for(int i = 0;i<15;i++){
-            list.add(new Player("asdf",1,1.0,"sex",i));
+
+    public void getPlayers(){
+        String sport[] = new String[] {"golf", "tennis", "badminton", "soccer", "football", "basketball", "competitive gaming", "hockey", "synchronized swimming", "track", "cross country", "gymnastics", "ice hockey", "figure skating", "volleyball"};
+        String name[] = new String[] {"Mr. Miro", "Alan", "David", "Alex", "Jimmy", "Sunny", "Jesse", "Ronal", "Colin", "Jarvis", "Cindy", "Cathy", "Hedwig", "Quinn", "Philip"};
+        String webpage[] = new String[] {"mirojurisic", "alandaboi", "firestix475", "LexingtonCV16-san", "JimmyRaven", "sunnnnny-cyber", "mgrddsj", "RonalYu", "ColinLiangWJ", "niceTimnice", "Cindy4869", "Cathy1399485071", "ASIA11793", "ZhangRunHui", "pilip11674"};
+        int imageResource[] = new int[] {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g, R.drawable.h, R.drawable.i, R.drawable.j, R.drawable.k, R.drawable.l, R.drawable.m, R.drawable.n, R.drawable.o};
+        int worth[] = new int[] {15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+        int age[] = new int[] {50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36};
+             list   = new ArrayList<Player>();
+        for(int i = 0; i < 15; i++){
+            list.add(new Player(name[i],age[i],worth[i], sport[i], imageResource[i], webpage[i]));
         }
-        return list;
+
     }
 
 }
