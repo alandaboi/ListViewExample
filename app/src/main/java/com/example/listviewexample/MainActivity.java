@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity  {
         String sport[] = new String[] {"Golf", "Tennis", "Badminton", "Soccer", "Football", "Basketball", "Gaming", "Hockey", "Swimming", "Track", "Cross Country", "Gymnastics", "Ice Hockey", "Figure Skating", "Volleyball"};
         String name[] = new String[] {"Mr. Miro", "Alan", "David", "Alex", "Jimmy", "Sunny", "Jesse", "Ronal", "Colin", "Jarvis", "Cindy", "Cathy", "Hedwig", "Quinn", "Philip"};
         String webpage[] = new String[] {"mirojurisic", "alandaboi", "firestix475", "LexingtonCV16-san", "JimmyRaven", "sunnnnny-cyber", "mgrddsj", "RonalYu", "ColinLiangWJ", "niceTimnice", "Cindy4869", "Cathy1399485071", "ASIA11793", "ZhangRunHui", "pilip11674"};
+        // Todo MUST change resource file names - use players names somehow!!
         int imageResource[] = new int[] {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g, R.drawable.h, R.drawable.i, R.drawable.j, R.drawable.k, R.drawable.l, R.drawable.m, R.drawable.n, R.drawable.o};
         int worth[] = new int[] {15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
         int age[] = new int[] {50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36};
