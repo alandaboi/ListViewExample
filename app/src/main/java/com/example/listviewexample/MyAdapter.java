@@ -44,7 +44,7 @@ public class MyAdapter extends ArrayAdapter<Player> {
 
 
         //below is additional content -- Imageview
-        ImageView imageView = single_item_view.findViewById(R.id.personalhandsomeportrait);
+        ImageView imageView = single_item_view.findViewById(R.id.imageView);
         imageView.setImageResource(listOfPlayers.get(position).getImageResource());
         single_item_view.setOnClickListener(new View.OnClickListener() {
             @Override
