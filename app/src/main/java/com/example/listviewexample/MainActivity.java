@@ -1,12 +1,18 @@
 package com.example.listviewexample;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -14,14 +20,43 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
     ArrayList<Player> list;
+    GridView gridView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListView listView = findViewById(R.id.listview);
+        gridView = findViewById(R.id.gridview);
         getPlayers();
         MyAdapter myAdapter = new MyAdapter(this, 0, list);
-        listView.setAdapter(myAdapter);
+         gridView.setAdapter(myAdapter);
+      /*   MenuInflater inflater = getMenuInflater();
+         ContextMenu contextMenu = findViewById(R.id.menu1);
+         inflater.inflate(R.menu.menu,contextMenu);
+       */
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.twocolumn:
+                gridView.setNumColumns(2);
+                gridView.setColumnWidth(GridView.AUTO_FIT);
+                return true;
+            case R.id.threecolumn:
+                gridView.setNumColumns(3);
+                gridView.setColumnWidth(GridView.AUTO_FIT);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void getPlayers(){
