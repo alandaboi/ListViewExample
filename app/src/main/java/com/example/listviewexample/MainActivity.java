@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity  {
         }
     }
 
-    public void getPlayers(){
+    public void getPlayers() {
         String sport[] = new String[] {"Golf", "Tennis", "Badminton", "Soccer", "Football", "Basketball", "Gaming", "Hockey", "Swimming", "Track", "Cross Country", "Gymnastics", "Ice Hockey", "Figure Skating", "Volleyball"};
         String name[] = new String[] {"Mr. Miro", "Alan", "David", "Alex", "Jimmy", "Sunny", "Jesse", "Ronal", "Colin", "Jarvis", "Cindy", "Cathy", "Hedwig", "Quinn", "Philip"};
         String webpage[] = new String[] {"mirojurisic", "alandaboi", "firestix475", "LexingtonCV16-san", "JimmyRaven", "sunnnnny-cyber", "mgrddsj", "RonalYu", "ColinLiangWJ", "niceTimnice", "Cindy4869", "Cathy1399485071", "ASIA11793", "ZhangRunHui", "pilip11674"};
