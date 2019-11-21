@@ -3,7 +3,8 @@
             android:id="@+id/menu1"
     >
     <item android:id="@+id/twocolumn"
-        android:title="2 column" />
+        android:title="2 column"
+        />
     <item android:id="@+id/threecolumn"
         android:title="3 column" />
 </menu>
